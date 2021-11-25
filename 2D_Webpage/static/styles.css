@@ -1,0 +1,16 @@
+.overall-div {
+  display: flex;
+  flex-direction: row;
+}
+
+.last-div {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.sum-span {
+  color: yellowgreen;
+  font: 32px;
+}
