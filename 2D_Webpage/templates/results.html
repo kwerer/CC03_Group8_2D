@@ -9,7 +9,7 @@ Page{% endblock %} {% block content %}
 <div class="overall-div">
   <div class="sub-div">
     Beta Values
-    <table border="1">
+    <table class="sub-table">
       {% for index in range(8) %}
       <tr>
         <th>beta{{index}}</th>
@@ -18,10 +18,29 @@ Page{% endblock %} {% block content %}
       {% endfor %}
     </table>
   </div>
-
+  <div class="sub-div">
+    Feature Names
+    <table class="sub-table">
+      {% for index in range(8) %}
+      <tr>
+        <th>{{features_names[index]}}</th>
+      </tr>
+      {% endfor %}
+    </table>
+  </div>
+  <div class="sub-div">
+    Input Feature Values
+    <table class="sub-table">
+      {% for index in range(8) %}
+      <tr>
+        <td>{{value_ls[index]}}</td>
+      </tr>
+      {% endfor %}
+    </table>
+  </div>
   <div class="sub-div">
     Features Normalized
-    <table border="1">
+    <table class="sub-table">
       {% for index in range(8) %}
       <tr>
         <td>{{val_norm[index]}}</td>
@@ -33,5 +52,19 @@ Page{% endblock %} {% block content %}
 <div class="last-div">
   Final Stringency Index:
   <span class="sum-span">{{sum}}</span>
+</div>
+<div class="container-fluid">
+  <a class="navbar-brand" href="/">BACK</a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#navbarNavDropdown"
+    aria-controls="navbarNavDropdown"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
 </div>
 {% endblock %}
